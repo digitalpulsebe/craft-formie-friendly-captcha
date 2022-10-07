@@ -42,9 +42,9 @@ class FormieFriendlyCaptcha extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
-    public $hasCpSettings = true;
+    public bool $hasCpSettings = true;
 
     public function init()
     {
@@ -68,7 +68,7 @@ class FormieFriendlyCaptcha extends Plugin
         );
     }
 
-    protected function settingsHtml(): string
+    protected function settingsHtml(): ?string
     {
         return Craft::$app->view->renderTemplate(
             'formie-friendly-captcha/settings'

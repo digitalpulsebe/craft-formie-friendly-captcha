@@ -12,7 +12,7 @@ use verbb\formie\elements\Submission;
 
 class FriendlyCaptcha extends Captcha
 {
-    public $handle = 'formieFriendlyCaptcha';
+    public ?string $handle = 'formieFriendlyCaptcha';
     public string $siteKey = '';
     public string $apiKey = '';
     public string $startEvent = 'focus';
@@ -64,7 +64,7 @@ class FriendlyCaptcha extends Captcha
         return Html::tag('div','', $attributes);
     }
 
-    public function getFrontEndJsVariables(Form $form, $page = null)
+    public function getFrontEndJsVariables(Form $form, $page = null): ?array
     {
         return [];
     }
@@ -116,7 +116,7 @@ class FriendlyCaptcha extends Captcha
         return App::parseEnv($this->apiKey);
     }
 
-    public function rules()
+    public function rules(): array
     {
         return [
             ['siteKey', 'string'],
