@@ -4,7 +4,7 @@
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0 or later.
+This plugin requires Craft CMS 3.x or Craft CMS 4.x.
 
 ## Installation
 
@@ -17,6 +17,10 @@ To install the plugin, follow these instructions.
 2. Then tell Composer to load the plugin:
 
        composer require digitalpulsebe/craft-formie-friendly-captcha
+
+   when using Craft 3.x use plugin version 1:
+
+       composer require digitalpulsebe/craft-formie-friendly-captcha:^1.0.0
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Friendly Captcha. Or run:
 
