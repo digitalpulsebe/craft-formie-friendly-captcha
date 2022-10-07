@@ -1,0 +1,61 @@
+{
+    "name": "digitalpulsebe/craft-formie-friendly-captcha",
+    "description": "Custom Captcha integration for Formie forms",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "friendly captcha",
+        "formie"
+    ],
+    "support": {
+        "docs": "https://github.com/https://github.com/digitalpulsebe/formie-friendly-captcha/blob/master/README.md",
+        "issues": "https://github.com/https://github.com/digitalpulsebe/formie-friendly-captcha/issues"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Digital Pulse",
+            "homepage": "https://www.digitalpulse.be/"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "craftcms/cms": "^3.0.0",
+        "digitalpulsebe/craft-friendly-captcha": "^1.0.0",
+        "verbb/formie": "^1.0.0",
+        "ext-curl": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../craft-friendly-captcha"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "digitalpulsebe\\formiefriendlycaptcha\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Friendly Captcha for Formie",
+        "handle": "formie-friendly-captcha",
+        "developer": "Digital Pulse",
+        "developerUrl": "https://www.digitalpulse.be/",
+        "documentationUrl": "https://github.com/digitalpulsebe/formie-friendly-captcha/blob/master/README.md",
+        "changelogUrl": "https://github.com/digitalpulsebe/formie-friendly-captcha/master/CHANGELOG.md",
+        "components": {
+            "validate": "digitalpulsebe\\formiefriendlycaptcha\\services\\ValidateService"
+        },
+        "class": "digitalpulsebe\\formiefriendlycaptcha\\FormieFriendlyCaptcha"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    }
+}
