@@ -2,7 +2,6 @@
     "name": "digitalpulsebe/craft-formie-friendly-captcha",
     "description": "Custom Captcha integration for Formie forms",
     "type": "craft-plugin",
-    "version": "1.0.0",
     "keywords": [
         "craft",
         "cms",
@@ -29,12 +28,6 @@
         "verbb/formie": "^1.0.0",
         "ext-curl": "*"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../craft-friendly-captcha"
-        }
-    ],
     "autoload": {
         "psr-4": {
           "digitalpulsebe\\formiefriendlycaptcha\\": "src/"
