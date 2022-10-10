@@ -48,7 +48,7 @@ To avoid this, use this option in config/formie.php:
 
 ```php
 [ 
-  'enableUnloadWarning' => true,
+  'enableUnloadWarning' => false,
 ]
 ```
 
