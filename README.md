@@ -38,6 +38,20 @@ Find the settings under Formie > Settings > Captchas > Friendly Captcha
 
 ![Screenshot](resources/img/screenshot_settings.png)
 
+## Formie unload warning
+
+Friendly Captcha will update the content of the form, 
+it will trigger a javascript alert "Changes you made may not be saved." when leaving the page.
+[Read Formie configuration documentation](https://verbb.io/craft-plugins/formie/docs/get-started/configuration)
+
+To avoid this, use this option in config/formie.php:
+
+```php
+[ 
+  'enableUnloadWarning' => true,
+]
+```
+
 ## Friendly Captcha for other uses
 
 Install the [Friendly Captcha](https://github.com/digitalpulsebe/craft-friendly-captcha) plugin to use Friendly Captcha outside of Formie.
