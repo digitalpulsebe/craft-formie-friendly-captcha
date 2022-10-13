@@ -4,7 +4,9 @@
 
 ## Requirements
 
-This plugin requires Craft CMS 3.x or Craft CMS 4.x.
+This plugin requires 
+- Craft CMS 3.x or Craft CMS 4.x.
+- [Formie 2.x](https://github.com/verbb/formie)
 
 ## Installation
 
