@@ -57,3 +57,7 @@ To avoid this, use this option in config/formie.php:
 ## Friendly Captcha for other uses
 
 Install the [Friendly Captcha](https://github.com/digitalpulsebe/craft-friendly-captcha) plugin to use Friendly Captcha outside of Formie.
+
+## Attribution
+
+The Friendly Captcha widget and logo belong to Friendly Captcha
