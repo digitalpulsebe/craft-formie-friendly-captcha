@@ -44,8 +44,8 @@ class FriendlyCaptcha extends Captcha
 
     public function getFrontEndHtml(Form $form, $page = null): string
     {
-        Craft::$app->view->registerJsFile('https://unpkg.com/friendly-challenge@0.9.7/widget.module.min.js', ['async' => true, 'defer' => true]);
-        Craft::$app->view->registerJsFile('https://unpkg.com/friendly-challenge@0.9.7/widget.min.js', ['async' => true, 'defer' => true]);
+        Craft::$app->view->registerJsFile(Craft::$app->assetManager->getPublishedUrl('@digitalpulsebe/formiefriendlycaptcha/assets/js/widget.module.min.js', true), ['async' => true, 'defer' => true]);
+        Craft::$app->view->registerJsFile(Craft::$app->assetManager->getPublishedUrl('@digitalpulsebe/formiefriendlycaptcha/assets/js/widget.min.js', true), ['async' => true, 'defer' => true]);
 
         $attributes = [
             'class' => 'frc-captcha',
