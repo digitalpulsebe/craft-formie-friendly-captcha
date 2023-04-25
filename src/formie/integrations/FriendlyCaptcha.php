@@ -17,6 +17,7 @@ class FriendlyCaptcha extends Captcha
     public string $apiKey = '';
     public string $startEvent = 'focus';
     public string $endpoint = 'global';
+    public ?string $customEndpoint = null;
     public bool $darkMode = false;
 
     public function getName(): string
@@ -114,6 +115,18 @@ class FriendlyCaptcha extends Captcha
     public function getApiKey(): string
     {
         return App::parseEnv($this->apiKey);
+    }
+
+    /**
+     * @return ?string
+     */
+    public function getCustomEndpoint(): ?string
+    {
+        if ($this->customEndpoint) {
+            return App::parseEnv($this->customEndpoint);
+        }
+
+        return null;
     }
 
     public function rules()
