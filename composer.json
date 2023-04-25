@@ -14,7 +14,7 @@
         "docs": "https://github.com/digitalpulsebe/craft-formie-friendly-captcha/blob/master/README.md",
         "issues": "https://github.com/digitalpulsebe/craft-formie-friendly-captcha/issues"
     },
-    "license": "MIT",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Digital Pulse",
@@ -23,7 +23,7 @@
     ],
     "require": {
         "craftcms/cms": "^4.0.0",
-        "digitalpulsebe/craft-friendly-captcha": "^2.0.0",
+        "digitalpulsebe/craft-friendly-captcha": "^2.1.0",
         "verbb/formie": "^2.0.0",
         "ext-curl": "*"
     },
