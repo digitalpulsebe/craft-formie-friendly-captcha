@@ -24,7 +24,7 @@
     "require": {
         "php": ">=7.4",
         "craftcms/cms": "^3.0.0",
-        "digitalpulsebe/craft-friendly-captcha": "^1.0.0",
+        "digitalpulsebe/craft-friendly-captcha": "^1.1",
         "verbb/formie": "^1.0.0",
         "ext-curl": "*"
     },

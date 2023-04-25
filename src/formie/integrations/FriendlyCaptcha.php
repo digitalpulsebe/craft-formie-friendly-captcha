@@ -17,6 +17,7 @@ class FriendlyCaptcha extends Captcha
     public string $apiKey = '';
     public string $startEvent = 'focus';
     public string $endpoint = 'global';
+    public ?string $customEndpoint = null;
     public bool $darkMode = false;
 
     public function getName(): string
@@ -43,8 +44,8 @@ class FriendlyCaptcha extends Captcha
 
     public function getFrontEndHtml(Form $form, $page = null): string
     {
-        Craft::$app->view->registerJsFile('https://unpkg.com/friendly-challenge@0.9.7/widget.module.min.js', ['async' => true, 'defer' => true]);
-        Craft::$app->view->registerJsFile('https://unpkg.com/friendly-challenge@0.9.7/widget.min.js', ['async' => true, 'defer' => true]);
+        Craft::$app->view->registerJsFile(Craft::$app->assetManager->getPublishedUrl('@digitalpulsebe/formiefriendlycaptcha/assets/js/widget.module.min.js', true), ['async' => true, 'defer' => true]);
+        Craft::$app->view->registerJsFile(Craft::$app->assetManager->getPublishedUrl('@digitalpulsebe/formiefriendlycaptcha/assets/js/widget.min.js', true), ['async' => true, 'defer' => true]);
 
         $attributes = [
             'class' => 'frc-captcha',
@@ -114,6 +115,18 @@ class FriendlyCaptcha extends Captcha
     public function getApiKey(): string
     {
         return App::parseEnv($this->apiKey);
+    }
+
+    /**
+     * @return ?string
+     */
+    public function getCustomEndpoint(): ?string
+    {
+        if ($this->customEndpoint) {
+            return App::parseEnv($this->customEndpoint);
+        }
+
+        return null;
     }
 
     public function rules()

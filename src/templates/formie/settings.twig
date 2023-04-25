@@ -72,7 +72,11 @@
     }, {
         value: 'eu',
         label: 'EU (Friendly Captcha Advanced or Enterprise plan)',
+    }, {
+        value: 'custom',
+        label: 'Custom (Self Hosted Captcha Server)',
     }],
+    toggle: true
 }) }}
 <p class="notice has-icon">
     <span class="icon" aria-hidden="true"></span>
@@ -84,4 +88,17 @@
     </span>
 </p>
 
-<hr>
+<div id="custom"{% if integration.endpoint != 'custom' %} class="hidden"{% endif %}>
+    <div id="endpoint-custom-fields">
+        {{ forms.autosuggestField({
+            label: "Custom endpoint",
+            instructions: "Use a custom endpoint for the Self Hosted Captcha Server",
+            id: 'customEndpoint',
+            name: 'customEndpoint',
+            value: integration.customEndpoint,
+            required: false,
+            suggestEnvVars: true,
+        })
+        }}
+    </div>
+</div>
