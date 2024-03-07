@@ -8,6 +8,11 @@ This plugin requires
 - Craft CMS 3.x or Craft CMS 4.x.
 - [Formie 2.x](https://github.com/verbb/formie)
 
+## ⚠️ Abandoning plugin
+
+We are no longer actively developing this plugin and won't upgrade it to Craft 5.
+The maintainers of Formie have added the integration natively.
+
 ## Installation
 
 To install the plugin, follow these instructions.
